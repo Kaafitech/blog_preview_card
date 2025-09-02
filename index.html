@@ -28,30 +28,38 @@
         --Gray950: hsl(0, 0%, 7%);
       }
 
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       .text-preset-1 {
         font-weight: 800;
         font-size: 24px;
         line-height: 36px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
       }
 
       .text-preset-2 {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
       }
       .text-preset-3 {
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
       }
       .text-preset-3-bold {
         font-weight: 800;
         font-size: 14px;
         line-height: 21px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
       }
 
       body {
@@ -67,8 +75,9 @@
         align-items: center;
       }
       .card {
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
         background-color: var(--White);
+        color: var(--Gray950);
         max-width: 384px;
         padding: 24px;
 
@@ -77,11 +86,12 @@
         gap: 24px;
 
         border-radius: 20px;
-        border: 1px solid var(--Gray950);
-        box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+        box-shadow: inset 0 0 0 1px var(--Gray950), 8px 8px 0 0 rgba(0, 0, 0, 1);
       }
 
       .illustration-article {
+        height: 200px;
+        object-fit: cover;
         border-radius: 10px;
       }
 
@@ -93,12 +103,26 @@
         gap: 12px;
       }
 
-      /* .category button {
+      .category button {
         padding: 4px 12px;
         border-radius: 4px;
         border: none;
         background-color: var(--Yellow);
-      } */
+        color: var(--Gray950);
+      }
+
+      .heading {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .heading:hover {
+        color: var(--Yellow);
+      }
+
+      .desc {
+        color: var(--Gray500);
+      }
 
       /* footer */
       footer {
@@ -115,6 +139,29 @@
       footer span {
         color: var(--Gray950);
       }
+
+      /* responsiveness */
+
+      @media (max-width: 375px) {
+        .card {
+          max-width: 327px;
+        }
+
+        .text-preset-3-sm {
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        .heading {
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        .desc {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -127,11 +174,15 @@
         />
         <section class="content">
           <div class="category">
-            <button class="text-preset-3-bold">Learning</button>
+            <button class="text-preset-3-sm text-preset-3-bold">
+              Learning
+            </button>
           </div>
-          <span class="text-preset-3">Published 21 Dec 2023</span>
-          <h1 class="text-preset-1">HTML & CSS foundations</h1>
-          <p class="text-preset-2">
+          <span class="text-preset-3-sm text-preset-3"
+            >Published 21 Dec 2023</span
+          >
+          <h1 class="heading text-preset-1">HTML & CSS foundations</h1>
+          <p class="desc text-preset-2">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
