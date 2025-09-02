@@ -26,9 +26,21 @@ Users should be able to:
 
 ## desktop
 
+### Design
+
+![./design/desktop-design.jpg](./design/desktop-design.jpg)
+
+### solution
+
 ![./design/screenshot.png](./design/screenshot.png)
 
 ## Mobile
+
+### Design
+
+![./design/mobile-design.jpg](./design/mobile-design.jpg)
+
+### solution
 
 ![./design/screenshotm.png](./design/screenshotm.png)
 
