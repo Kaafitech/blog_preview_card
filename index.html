@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="reset.css" />
     <link
       rel="icon"
       type="image/png"
@@ -14,31 +13,134 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Blog preview card</title>
+
+    <style>
+      :root {
+        --Yellow: hsl(47, 88%, 63%);
+        --White: hsl(0, 0%, 100%);
+        --Gray500: hsl(0, 0%, 42%);
+        --Gray950: hsl(0, 0%, 7%);
+      }
+
+      .text-preset-1 {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0px;
+      }
+
+      .text-preset-2 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+      .text-preset-3 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0px;
+      }
+      .text-preset-3-bold {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0px;
+      }
+
+      body {
+        font-family: "Figtree", sans-serif;
+        background-color: var(--Yellow);
+        font-size: 16px;
+      }
+
+      main {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        box-sizing: border-box;
+        background-color: var(--White);
+        max-width: 384px;
+        padding: 24px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        border-radius: 20px;
+        border: 1px solid var(--Gray950);
+        box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+      }
+
+      .illustration-article {
+        border-radius: 10px;
+      }
+
+      /* content */
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      /* .category button {
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: none;
+        background-color: var(--Yellow);
+      } */
+
+      /* footer */
+      footer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      footer img {
+        width: 32px;
+        height: 32px;
+      }
+
+      footer span {
+        color: var(--Gray950);
+      }
+    </style>
   </head>
   <body>
     <main>
-      <article class="card">
+      <div class="card">
         <img
+          class="illustration-article"
           src="./assets/images/illustration-article.svg"
           alt="illustration-article"
         />
         <section class="content">
-          <button>Learning</button>
-          <p>Published 21 Dec 2023</p>
-          <h1>HTML & CSS foundations</h1>
-          <p>
+          <div class="category">
+            <button class="text-preset-3-bold">Learning</button>
+          </div>
+          <span class="text-preset-3">Published 21 Dec 2023</span>
+          <h1 class="text-preset-1">HTML & CSS foundations</h1>
+          <p class="text-preset-2">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
         </section>
-
         <footer>
           <img src="./assets/images/image-avatar.webp" alt="image-avatar" />
-          <p>Greg Hooper</p>
+          <span class="text-preset-3-bold">Greg Hooper</span>
         </footer>
-      </article>
+      </div>
     </main>
   </body>
 </html>
