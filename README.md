@@ -26,11 +26,11 @@ Users should be able to:
 
 ## desktop
 
-![./design/Screenshot.png](./design/Screenshot.png)
+![./design/screenshot.png](./design/screenshot.png)
 
 ## Mobile
 
-![./design/Screenshotm.png](./design/Screenshotm.png)
+![./design/screenshotm.png](./design/screenshotm.png)
 
 ### Links
 
